@@ -32,7 +32,7 @@ def get_iconset_version():
     else:
         file = find(FA_CSS)
         if file:
-            with open(file, 'r') as stream:
+            with open(file, 'r', encoding='utf-8') as stream:
                 version = stream.readlines()[1]
                 m = r.search(version)
                 if m:
